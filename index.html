@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel Sheet Uploader</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="header_wrapper">
+        <header>
+          <h1 class="header">Upload</h1>
+        </header>
+      </section>
+      <section class="table_upload_wrapper">
+        <div class="table_wrapper">
+          <div class="table_header_wrapper">
+            <h2 class="table_title">Column Mapping</h2>
+            <button type="button" class="cta_button" id="save">Save</button>
+          </div>
+
+          <div class="table_container">
+            <table class="table"></table>
+          </div>
+        </div>
+
+        <section class="uploader">
+          <div>
+            <img src="./asset/upload.svg" class="cloud" />
+            <p>
+              Drag and drop a file here<br />
+              or
+            </p>
+            <form enctype="multipart/form-data">
+              <label class="choose_file">
+                <input class="file_upload" type="file" name="files[]" />
+                Choose File
+              </label>
+            </form>
+          </div>
+        </section>
+
+        <div class="snackbar" id="snackbar"></div>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+  </body>
+</html>

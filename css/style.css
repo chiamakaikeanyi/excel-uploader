@@ -1,0 +1,194 @@
+body {
+  background-color: #fbfbfc;
+  color: #5f5e77;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.table_upload_wrapper {
+  background-color: #fff;
+  box-shadow: 0 1px 0 #f5eaea;
+}
+
+.table_container {
+  overflow-x: auto;
+}
+
+.table_wrapper {
+  display: none;
+}
+
+.table_header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table_title {
+  color: #6e6f71;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 15px;
+}
+
+.cta_button,
+.choose_file {
+  background-color: #f18019;
+  border: none;
+  border-radius: 3px;
+  color: #eee;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 10px;
+  outline-color: #f18019;
+  width: 80px;
+}
+
+.cta_button:hover {
+  opacity: 0.8;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.table td {
+  font-size: 12px;
+  padding: 20px;
+}
+
+.table_header tr {
+  background-color: #fbfbfc;
+  color: #b4b8c3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.table_body td {
+  border-bottom: 1px solid #eee;
+  color: #909098;
+}
+
+.uploader {
+  align-items: center;
+  background-color: #fbfbfc;
+  color: #c7c8cc;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.cloud {
+  transform: scaleX(-1);
+}
+
+.file_upload {
+  left: -99999rem;
+  position: absolute;
+}
+
+.choose_file {
+  display: inline-block;
+  padding: 12px 20px;
+}
+
+.choose_file:focus-within,
+.choose_file:hover {
+  opacity: 0.8;
+  outline: 5px solid;
+}
+
+#snackbar {
+  background-color: #5f965f;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 17px;
+  margin-left: -125px;
+  min-width: 250px;
+  padding: 16px;
+  position: fixed;
+  right: 5%;
+  text-align: center;
+  top: 30px;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#snackbar.show {
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  visibility: visible;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .main {
+    margin: 100px;
+  }
+
+  .table_upload_wrapper {
+    padding: 16px;
+  }
+
+  .table {
+    table-layout: fixed;
+  }
+}
